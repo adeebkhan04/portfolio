@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.logo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #FF4C4C;
+    cursor: pointer;
+}
+
+nav a {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-left: 3rem;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav a.active::after,
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF4C4C;
+}
+
+nav a.active, nav a:hover {
+    color: #FF4C4C;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 10%;
+    background: linear-gradient(120deg, #1F1F1F, #121212);
+}
+
+.home-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem; 
+}
+
+.home-content h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem; 
+}
+
+.typing-text {
+    color: #FF4C4C;
+    font-weight: 600;
+}
+
+.home-content p {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    color: #BFBFBF;
+}
+
+.home-img {
+    flex: 1;
+    margin-right: 4rem;
+}
+
+.home-img img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 76, 76, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: transparent;
+    color: #FF4C4C;
+    border: 2px solid #FF4C4C;
+    border-radius: 50px;
+    margin-top: 2rem; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF4C4C;
+    color: #fff;
+}
+
+
+.social-icons {
+    margin-top: 4rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2.5rem; 
+    background-color: transparent;
+    border: 0.2rem solid #FF4C4C;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #FF4C4C;
+}
+
+.social-icons a:hover {
+    background-color: #FF4C4C;
+    color: #000;
+    transform: scale(1.2);
+}
+
+.skills {
+    padding: 8rem 10%;
+    background-color: black;
+    text-align: center;
+}
+
+.skills h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: indianred;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.skill-box {
+    flex: 1;
+    background: #2A2A2A;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: #FF4C4C;
+    margin-bottom: 1.5rem;
+}
+
+.skill-box h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.skill-box p {
+    font-size: 1.6rem;
+    color: #BFBFBF;
+}
+
+.contact {
+    padding: 8rem 10%;
+    background-color: #121212;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: indianred;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 1.5rem;
+    background: #1E1E1E;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #FF4C4C;
+    font-size: 1.6rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #FF4C4C;
+}
+
+.about {
+    padding: 8rem 10%;
+    background-color: #1F1F1F;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.about h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: #FF4C4C;
+}
+
+.about p {
+    font-size: 1.8rem;
+    color: #BFBFBF;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.resume {
+    padding: 8rem 10%;
+    background-color: #2A2A2A;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+.resume h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: #FF4C4C;
+}
+
+.resume p {
+    font-size: 1.8rem; 
+    color: #BFBFBF;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.resume .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem; 
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: indianred;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid indianred;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.resume .btn:hover {
+    transform: scale(1.03);
+    background-color: indianred;
+    color: black;
+    box-shadow: 0 0 25px indianred;
+}
+
+section {
+    padding: 8rem 10%;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: snow;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px solid transparent;  
+    transition: 0.3s ease;
+}
+
+.section-title:hover {
+    color: indianred;  
+    border-bottom: 3px solid indianred; 
+}
+
+@media (max-width: 768px) {
+    .about h1, .resume h1 {
+        font-size: 4rem; 
+    }
+
+    .about p, .resume p {
+        font-size: 1.6rem; 
+    }
+
+    .resume .btn {
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem; 
+    }
+}
