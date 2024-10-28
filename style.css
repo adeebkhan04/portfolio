@@ -350,3 +350,67 @@ section {
         padding: 1rem 2.5rem; 
     }
 }
+
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide default nav on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 3rem;
+        color: #FF4C4C;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active + nav {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 2rem 0;
+    }
+    nav a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-img img {
+        width: 60vw;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        padding: 5rem 2rem;
+    }
+}
