@@ -11,6 +11,8 @@
 <body>
     <header>
         <a href="#" class="logo">Adeeb</a>
+        <div class="menu-toggle">&#9776;</div>
+
 
         <nav>
             <a href="#home" class="active">Home</a>
@@ -92,6 +94,8 @@
         window.addEventListener('scroll', () => {
             let sections = document.querySelectorAll('section');
             let navLinks = document.querySelectorAll('nav a');
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
 
             sections.forEach(section => {
                 let top = window.scrollY;
@@ -99,6 +103,11 @@
                 let height = section.offsetHeight;
                 let id = section.getAttribute('id');
 
+
+                toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                nav.classList.toggle('active');
+                     });
                 if (top >= offset && top < offset + height) {
                     navLinks.forEach(link => {
                         link.classList.remove('active');
